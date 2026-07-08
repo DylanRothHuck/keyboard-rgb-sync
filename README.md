@@ -20,7 +20,7 @@ keyboard via raw HID commands.
 
 - Python 3
 - A laptop with an RGB keyboard that accepts raw HID commands
-  (tested on System76/STEM keyboards, likely works on similar hardware)
+  (tested on an ASUS ROG Zephyrus G15 GA503RM)
 - `sudo` access to write to `/dev/hidraw*`
 
 ## Installation
