@@ -99,14 +99,13 @@ to apply the color without switching themes.
 
 ## Troubleshooting
 
-**Permission denied on /dev/hidraw**: The script needs root access to write to
+**Permission denied on /dev/hidraw**: The script needs write access to
 the HID device. Run with `sudo` or set up a udev rule:
 
 ```bash
-echo 'KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0660", GROUP="plugdev"' \
+echo 'KERNEL=="hidraw*", SUBSYSTEM=="hidraw", MODE="0666", TAG+="uaccess", TAG+="udev-acl"' \
   | sudo tee /etc/udev/rules.d/99-keyboard.rules
 sudo udevadm control --reload-rules
-sudo usermod -aG plugdev $USER
 ```
 
 Then log out and back in.
