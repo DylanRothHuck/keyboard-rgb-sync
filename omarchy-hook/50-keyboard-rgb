@@ -1,0 +1,4 @@
+#!/bin/bash
+# Sets keyboard RGB to current theme accent color
+
+exec /home/ddrh/.local/bin/set-keyboard-rgb
