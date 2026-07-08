@@ -4,7 +4,7 @@ import sys
 import re
 import colorsys
 
-HID_PATH = "/dev/hidraw4"
+HID_PATH = os.environ.get("HID_PATH", "/dev/hidraw4")
 sudo_user = os.environ.get("SUDO_USER")
 HOME = os.path.expanduser(f"~{sudo_user}") if sudo_user else os.path.expanduser("~")
 COLORS_PATH = f"{HOME}/.config/omarchy/current/theme/colors.toml"

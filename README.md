@@ -35,8 +35,12 @@ ls /dev/hidraw*
 cat /dev/hidrawN    # replace N with each number until you see output
 ```
 
-Once identified, open `set-keyboard-rgb` and set `HID_PATH` to your device
-(e.g. `/dev/hidraw4`).
+Once identified, set the `HID_PATH` environment variable when running, or
+change the default in the script:
+
+```bash
+sudo HID_PATH=/dev/hidraw3 set-keyboard-rgb
+```
 
 ### 2. Install the script
 
